@@ -27,6 +27,14 @@ describe('Index', () => {
       expect(fromNumber(0)).toBe('');
     });
 
+    test('Caso especial de 12.456', () => {
+      expect(() => fromNumber(12.456)).toThrow();
+    });
+
+    test('Caso especial de número negativo', () => {
+      expect(() => fromNumber(-4)).toThrow();
+    });
+
     test('Caso especial de no number', () => {
       expect(() => fromNumber('No number')).toThrow();
     });

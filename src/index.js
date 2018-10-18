@@ -16,7 +16,7 @@ const ROMAN_TABLE = {
 const ROMAN_TABLE_KEYS = Object.keys(ROMAN_TABLE).reverse();
 
 export const fromNumber = (value) => {
-  if (typeof value !== 'number' || value < 0 || !Number.isInteger(value)) {
+  if (value < 0 || !Number.isInteger(value)) {
     throw new Error('No number');
   }
 
